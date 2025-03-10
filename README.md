@@ -1,4 +1,4 @@
-# Understanding the RIN Knowledge Graph
+# Understanding the RIN Knowledge Graph Project
 
 ### Why This Exploration?
 
