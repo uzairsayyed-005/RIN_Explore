@@ -9,7 +9,7 @@ By working through these tasks, I aim to:
 
 | **Dates**     | **Task Heading**                                                      | **Status**    |
 |---------------|-----------------------------------------------------------------------|---------------|
-| March 10–13   | Deep Dive into RIN JSON Data                                          | In Progress   |
+| March 10–13   | Deep Dive into RIN JSON Data                                          | Completed   |
 | March 14–17   | Exploring LinkML                                                      | Not Started   |
 | March 18–21   | Creating a sample Neo4j instance for improved visualization           | Not Started   |
 | March 22–24   | Exploring different RAG techniques for the project                    | Not Started   |
