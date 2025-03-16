@@ -1,0 +1,18 @@
+id: https://w3id.org/linkml/examples/employeeinfo
+name: employeeinfo
+prefixes:
+  linkml: https://w3id.org/linkml/
+  employeeinfo: https://w3id.org/linkml/examples/employeeinfo
+imports:
+  - linkml:types
+default_range: string
+default_prefix: employeeinfo
+
+classes:
+  Employee:
+    attributes:
+      employee_id:
+      full_name:
+      email:
+      department:
+      hire_date:

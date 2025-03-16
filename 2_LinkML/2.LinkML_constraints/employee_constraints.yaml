@@ -1,0 +1,46 @@
+id: https://w3id.org/linkml/examples/employeeinfo
+name: employeeinfo
+prefixes:
+  linkml: https://w3id.org/linkml/
+  employeeinfo: https://w3id.org/linkml/examples/employeeinfo
+imports:
+  - linkml:types
+default_range: string
+default_prefix: employeeinfo
+
+types:
+  email_address:
+    base: str
+    pattern: '^[\w\.-]+@[\w\.-]+\.\w+$'
+  date:
+    base: str
+    pattern: '^\d{4}-\d{2}-\d{2}$'
+
+classes:
+  Employee:
+    attributes:
+      employee_id:
+        identifier: true
+        required: true
+        description: Unique identifier for the employee.
+      full_name:
+        required: true
+        description: Full name of the employee.
+      email:
+        range: email_address
+        required: true
+        description: Work email address of the employee.
+      department:
+        required: true
+        description: Department where the employee works.
+      hire_date:
+        range: date
+        required: true
+        description: Date when the employee was hired (YYYY-MM-DD).
+  Container:
+    tree_root: true
+    attributes:
+      employees:
+        multivalued: true
+        inlined_as_list: true
+        range: Employee

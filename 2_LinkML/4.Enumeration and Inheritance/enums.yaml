@@ -1,0 +1,85 @@
+id: https://w3id.org/linkml/examples/employeeinfo
+name: employeeinfo
+prefixes:
+  linkml: https://w3id.org/linkml/
+  employeeinfo: https://w3id.org/linkml/examples/employeeinfo
+  DEPT: https://example.org/department/
+  EMP_STATUS: https://example.org/employment_status/
+imports:
+  - linkml:types
+default_range: string
+default_prefix: employeeinfo
+
+types:
+  email_address:
+    base: str
+    pattern: '^[\w\.-]+@[\w\.-]+\.\w+$'
+  date:
+    base: str
+    pattern: '^\d{4}-\d{2}-\d{2}$'
+
+enums:
+  DepartmentEnum:
+    description: Enumeration of company departments
+    permissible_values:
+      HR:
+        description: Human Resources department
+        meaning: DEPT:HR
+      IT:
+        description: Information Technology department
+        meaning: DEPT:IT
+      SALES:
+        description: Sales department
+        meaning: DEPT:SALES
+      MARKETING:
+        description: Marketing department
+        meaning: DEPT:MARKETING
+  EmploymentStatusEnum:
+    description: Enumeration of employment statuses
+    permissible_values:
+      FULL_TIME:
+        description: Full-time employment
+        meaning: EMP_STATUS:FULL_TIME
+      PART_TIME:
+        description: Part-time employment
+        meaning: EMP_STATUS:PART_TIME
+      CONTRACTOR:
+        description: Contractor
+        meaning: EMP_STATUS:CONTRACTOR
+      INTERN:
+        description: Intern
+        meaning: EMP_STATUS:INTERN
+
+classes:
+  Employee:
+    attributes:
+      employee_id:
+        identifier: true
+        required: true
+        description: Unique identifier for the employee.
+      full_name:
+        required: true
+        description: Full name of the employee.
+      email:
+        range: email_address
+        required: true
+        description: Work email address of the employee.
+      department:
+        range: DepartmentEnum
+        required: true
+        description: Department where the employee works.
+      employment_status:
+        range: EmploymentStatusEnum
+        required: true
+        description: Employment status of the employee.
+      hire_date:
+        range: date
+        required: true
+        description: Date when the employee was hired (YYYY-MM-DD).
+  Container:
+    tree_root: true
+    attributes:
+      employees:
+        multivalued: true
+        inlined_as_list: true
+        range: Employee

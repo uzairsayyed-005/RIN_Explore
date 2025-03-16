@@ -10,8 +10,7 @@ By working through these tasks, I aim to:
 | **Dates**     | **Task Heading**                                                      | **Status**    |
 |---------------|-----------------------------------------------------------------------|---------------|
 | March 10–13   | Deep Dive into RIN JSON Data                                          | Completed   |
-| March 14–17   | Exploring LinkML                                                      | Not Started   |
-| March 18–21   | Creating a sample Neo4j instance for improved visualization           | Not Started   |
-| March 22–24   | Exploring different RAG techniques for the project                    | Not Started   |
+| March 14–17   | Exploring LinkML                                                      | Completed   |
+| March 18–April 8   | Draft an initial proposal for the project, then refine it by incorporating your mentor's feedback and reviews.        | Not Started   |
 
 This structured approach will help me understand the project thoroughly so that I can draft a detailed proposal for contributing. I will add detailed files with more information about each task upon completion.
